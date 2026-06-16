@@ -1,0 +1,60 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "repo-publication-gate"
+version = "0.1.0"
+description = "Local-first pre-publication security and governance gate for repositories."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [
+  { name = "BootcampOnbaco" }
+]
+maintainers = [
+  { name = "BootcampOnbaco" }
+]
+keywords = [
+  "security",
+  "repository",
+  "secrets",
+  "release",
+  "governance",
+  "cli",
+  "oss"
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "Intended Audience :: System Administrators",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Security",
+  "Topic :: Software Development :: Quality Assurance"
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+  "build>=1.2",
+  "ruff>=0.6"
+]
+
+[project.urls]
+Homepage = "https://github.com/BootcampOnbaco/repo-publication-gate"
+Issues = "https://github.com/BootcampOnbaco/repo-publication-gate/issues"
+Security = "https://github.com/BootcampOnbaco/repo-publication-gate/security/policy"
+
+[project.scripts]
+repo-gate = "repo_publication_gate.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"

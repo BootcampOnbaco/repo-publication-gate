@@ -1,0 +1,24 @@
+[gate]
+fail_on = "high"
+max_file_size_bytes = 5242880
+content_scan_max_bytes = 1048576
+ignore_paths = [
+  ".git/**",
+  "**/.git/**",
+  ".venv/**",
+  "**/.venv/**",
+  "venv/**",
+  "**/venv/**",
+  "node_modules/**",
+  "**/node_modules/**",
+  "build/**",
+  "**/build/**",
+  "dist/**",
+  "**/dist/**",
+  "__pycache__/**",
+  "**/__pycache__/**",
+]
+allow_paths = [
+  ".env.example",
+  ".env.template",
+]

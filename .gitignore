@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+build/
+dist/
+node_modules/
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+!.env.template
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Local data and backups
+*.sqlite
+*.sqlite3
+*.db
+*.bak
+*.dump
+*.backup
+
+# Reports
+publication-gate-report.*
